@@ -1,0 +1,458 @@
+														JSON
+
+1. Создать внешний репозиторий c названием JSON. 
+										==== 
+
+	Войти в https://github.com/olgadygai -> вкладка Repositories -> New -> в поле Repository name указать название репозитория (JSON) -> выбрать Public -> нажать Create repository 
+
+2. Клонировать репозиторий JSON на локальный компьютер.
+										==== 
+
+	cd C:\Users\joeth\Documents\github -> git clone https://github.com/olgadygai/JSON.git
+
+3. Внутри локального JSON создать файл “new.json”. 
+										====
+	 cd  JSON/ -> touch new.json
+
+4. Добавить файл под гит. 
+										====
+	git add . (git add new.json)
+
+5. Закоммитить файл. 
+										====
+	git commit -m "Create new file"
+
+6. Отправить файл на внешний GitHub репозиторий.
+										====
+	git push
+
+7. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.
+
+										==== 
+	vim new.json -> i	->
+
+{"name":"Olga",
+"firstname":"Dygai",
+"patronymic":"Aleksandrovna",
+"age": 28,
+"pet": 1,
+"expected_favorite_salary $": 1500
+}
+	-> esc -> :wq -> enter
+
+ 8. Отправить изменения на внешний репозиторий. 
+										==== 
+	git add new.json -> git commit -m "Change the file"-> git push
+
+ 9. Создать файл preferences.json 
+										==== 
+	touch preferences.json
+
+ 10. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, страна, которую хотели бы посетить) в формате JSON. 
+
+										==== 
+	(vim preferences.json -> i)
+
+{"favorite_movie":"Men in Black",
+"favorite_TV_show":"Dexter",
+"favorite_food":"fish",
+"favorite_season":"fall",
+"favorite_country":"Italy"
+}
+	-> esc -> :wq -> enter
+
+ 11. Создать файл skills.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON 
+
+										==== 
+	touch skills.json -> (vim skills.json -> i)
+
+{"skills":[
+        "gitbash",
+        "github",
+        "Postman",
+        "Fidler",
+        "SQL",
+        "VPN",
+        "Devtolls",
+        "Mobile_Testing",
+        "Jmeter",
+        "Python",
+        "Theory_Testing"
+]
+}
+	-> esc -> :wq -> enter
+
+ 12. Отправить сразу 2 файла на внешний репозиторий. 
+										==== 
+
+	git add . -> git commit -m "Create a file" -> git push
+
+ 13. На веб интерфейсе создать файл bug_report.json. 
+										==== 
+
+	Add file -> Create new file -> в окне Name your file ввести bug_report.json 
+
+ 14. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 
+										==== 
+	Commit new file
+
+ 15. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON. 
+
+										====
+	 Edit this file ->
+
+{"bug_report":{"Project":"Приют для животных",
+               "Issue_Type":"Bug",
+               "ID":"BG1", 
+               "Summary":"На странице Питомцы в поле Возвраст можно ввести отрицательное значение",
+               "Precondition":"1) Открыть сайт http://130.193.37.179/app/pets",
+               "STR":"1) Нажать на поле Возвраст 2) Ввести значение -2",
+               "Actual_result":"В поле Возвраст отобразилось значение -2",
+               "Expected_Result":"Значение - невозможно ввести в поле Возраст",
+               "Priority":"Major",
+               "Environment":"Windows 10 Google Chrome Version 88.0.4324.190"
+              }
+}
+ 16. Сделать Commit changes (сохранить) изменения на веб интерфейсе. 
+
+										==== 
+	нажать Commit changes
+
+ 17. Синхронизировать внешний и локальный репозиторий JSON 
+										====
+	git pull 
+
+message:
+
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 12 (delta 4), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), 3.35 KiB | 143.00 KiB/s, done.
+From https://github.com/olgadygai/JSON
+   e500991..96f20a3  main       -> origin/main
+Updating e500991..96f20a3
+Fast-forward
+ bug_report.json | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 bug_report.json
+
+
+										XML
+ 18. Создать внешний репозиторий c названием XML.
+										====
+
+	Войти в https://github.com/olgadygai -> вкладка Repositories -> New -> в поле Repository name указать название репозитория (XML) -> выбрать Public -> нажать Create repository 
+
+ 19. Клонировать репозиторий XML на локальный компьютер.
+										====
+
+	cd C:\Users\joeth\Documents\github -> git clone https://github.com/olgadygai/XML.git
+
+ 20. Внутри локального XML создать файл “new.xml”.
+										====
+	cd  XML/ -> touch new.xml
+	
+ 21. Добавить файл под гит.
+										====
+	git add . (git add new.xml)
+
+ 22. Закоммитить файл.
+										====
+	git commit -m "Create new file"
+
+ 23. Отправить файл на внешний GitHub репозиторий.
+										====
+	git push
+
+ 24. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+
+										====
+	vim new.xml -> i	->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <name>Olga</name>
+  <firstname>Dygai</firstname>
+  <patronymic>Aleksandrovna</patronymic>
+  <age>28</age>
+  <pet>1</pet>
+  <favoritesalary>1500</favoritesalary>
+</root>
+	-> esc -> :wq -> enter
+
+ 25. Отправить изменения на внешний репозиторий.
+										====
+	git add new.xml -> git commit -m "Change the file"-> git push
+
+ 26. Создать файл preferences.xml
+										====
+		touch preferences.xml
+
+ 27. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, страна, которую хотели бы посетить) в формате XML.
+
+										====
+	(vim preferences.xml -> i)
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <favorite_movie>Men in Black</favorite_movie>
+  <favorite_TV_show>Dexter</favorite_TV_show>
+  <favorite_food>fish</favorite_food>
+  <favorite_season>fall</favorite_season>
+  <favorite_country>Italy</favorite_country>
+</root>
+	-> esc -> :wq -> enter
+
+ 28. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+
+										====
+	touch skills.xml -> (vim skills.xml -> i)
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+  <skills>gitbash</skills>
+  <skills>github</skills>
+  <skills>Postman</skills>
+  <skills>Fidler</skills>
+  <skills>SQL</skills>
+  <skills>VPN</skills>
+  <skills>Devtolls</skills>
+  <skills>Mobile_Testing</skills>
+  <skills>Jmeter</skills>
+  <skills>Python</skills>
+  <skills>Theory_Testing</skills>
+</root>
+	-> esc -> :wq -> enter
+	
+ 29. Сделать коммит в одну строку.
+
+										====
+
+	git add . & git commit -m "Create a file"
+
+message:
+[main 2e8b8c3] Create a file
+ 2 files changed, 22 insertions(+)
+ create mode 100644 preferences.xml
+ create mode 100644 skills.xml
+[1]+  Done                    git add .
+
+
+ 30. Отправить сразу 2 файла на внешний репозиторий.
+										====
+	git push
+
+ 31. На веб интерфейсе создать файл bug_report.xml.
+										====
+
+	Add file -> Create new file -> в окне Name your file ввести bug_report.xml 
+
+ 32. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+										====
+	Commit new file
+
+ 33. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+
+										====
+	Edit this file ->
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<bug_report>
+  <Project>Приют для животных</Project>
+  <Issue_Type>Bug</Issue_Type>
+  <ID>BG1</ID>
+  <Summary>На странице Питомцы в поле Возраст можно ввести отрицательное значение</Summary>
+  <Precondition>1) Открыть сайт http://130.193.37.179/app/pets</Precondition>
+  <STR>1) Нажать на поле Возраст 2) Ввести значение -2</STR>
+  <Actual_result>В поле Возраст отобразилось значение -2</Actual_result>
+  <Expected_Result>Значение - невозможно ввести в поле Возраст</Expected_Result>
+  <Priority>Major</Priority>
+  <Environment>Windows 10 Google Chrome Version 88.0.4324.190</Environment>
+</bug_report>
+
+ 34. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+										====
+	нажать Commit changes
+
+ 35. Синхронизировать внешний и локальный репозиторий XML
+										====
+	git pull
+ 
+message:
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.18 KiB | 200.00 KiB/s, done.
+From https://github.com/olgadygai/XML
+   2e8b8c3..ab15c3c  main       -> origin/main
+Updating 2e8b8c3..ab15c3c
+Fast-forward
+ bug_report.xml | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 bug_report.xml
+
+										TXT
+
+ 36. Создать внешний репозиторий c названием TXT.
+
+										====
+
+Войти в https://github.com/olgadygai -> вкладка Repositories -> New -> в поле Repository name указать название репозитория (TXT) -> выбрать Public -> нажать Create repository 
+
+
+ 37. Клонировать репозиторий TXT на локальный компьютер.
+										====
+
+	cd C:\Users\joeth\Documents\github ->  git clone https://github.com/olgadygai/TXT.git
+
+
+ 38. Внутри локального TXT создать файл “new.txt”.
+										====
+	cd TXT/ -> touch new.txt
+
+ 39. Добавить файл под гит.
+										====
+
+	git add . (git add new.txt)
+
+ 40. Закоммитить файл.
+										====
+	git commit -m "Create new file"
+
+ 41. Отправить файл на внешний GitHub репозиторий.
+										====
+
+	git push
+
+ 42. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+
+										====
+	vim new.txt -> i	->
+
+name - Olga
+firstname - Dygai
+patronymic - Aleksandrovna
+age - 28
+pet - 1
+expected favorite salary - 1500
+
+	-> esc -> :wq -> enter
+
+ 43. Отправить изменения на внешний репозиторий.
+										====
+
+	git add new.txt -> git commit -m "Change the file"-> git push
+
+ 44. Создать файл preferences.txt
+										====
+
+	touch preferences.txt
+	
+ 45. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, страна, которую хотели бы посетить) в формате TXT.
+
+										====
+	(vim preferences.txt -> i)
+
+favorite movie - Men in Black
+favorite TV-show - Dexter
+favorite food - fish
+favorite season - fall
+favorite country - Italy
+
+	-> esc -> :wq -> enter
+
+
+ 46. Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+
+										====
+	touch skills.txt -> (vim skills.txt -> i)
+
+Skills
+	gitbash
+        github
+        Postman
+        Fidler
+        SQL
+        VPN"
+        Devtolls
+        Mobile Testing
+        Jmeter
+        Python
+        Theory Testing
+
+-> esc -> :wq -> enter
+
+
+ 47. Сделать коммит в одну строку.
+										====
+	git add . & git commit -m "Create a file"
+
+	message:
+
+[main a7e2ef9] Create a file
+ 2 files changed, 17 insertions(+)
+ create mode 100644 preferences.txt
+ create mode 100644 skills.txt
+[1]+  Done                    git add .
+
+										
+ 48. Отправить сразу 2 файла на внешний репозиторий.
+										====
+	git push
+		
+ 49. На веб интерфейсе создать файл bug_report.txt.
+										====
+
+	Add file -> Create new file -> в окне Name your file ввести bug_report.txt
+	
+
+ 50. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+										====
+
+	Commit new file
+
+ 51. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+
+										====
+Edit this file ->
+
+bug_report:
+Project:"Приют для животных"
+               Issue_Type - Bug
+               ID - BG1 
+               Summary - На странице Питомцы в поле Возраст можно ввести отрицательное значение
+               Precondition -
+			1) Открыть сайт http://130.193.37.179/app/pets
+               STR - 
+			1) Нажать на поле Возраст
+			2) Ввести значение -2
+               Actual_result - В поле Возраст отобразилось значение -2
+               Expected_Result - Значение "-" невозможно ввести в поле Возраст
+               Priority - Major
+               Environment - Windows 10 Google Chrome Version 88.0.4324.190
+              
+ 52. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+										====
+	нажать Commit changes
+
+ 53. Синхронизировать внешний и локальный репозиторий TXT
+										====
+	git pull
+
+	message:
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.71 KiB | 145.00 KiB/s, done.
+From https://github.com/olgadygai/TXT
+   a7e2ef9..ac78001  main       -> origin/main
+Updating a7e2ef9..ac78001
+Fast-forward
+ bug_report.txt | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+ create mode 100644 bug_report.txt
+ 
