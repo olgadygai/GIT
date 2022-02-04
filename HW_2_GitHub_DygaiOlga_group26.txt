@@ -1,0 +1,191 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+						====
+		- Postman 
+
+	git branch Postman
+
+		- Jmeter
+
+	git branch Jmeter
+
+		- CheckLists
+
+	git branch CheckLists
+
+		- Bug Reports
+
+	git branch Bug_Reports
+
+		- SQL
+
+	git branch SQL
+
+		- Charles
+
+	git branch Charles
+
+		- Mobile testing	
+
+	git branch Mobile_testing
+
+
+	Команда git branch создает ветку, но не переходит в нее.
+	Команда git checkout -b создает ветку и перепрыгивает в новую ветку (только созданную).
+	Команда git checkout название ветки, перепрыгнет на указанную ветку.
+
+2. Запушить все ветки на внешний репозиторий
+
+							====
+
+	git push -u origin Postman Jmeter CheckLists Bug_Reports SQL Charles Mobile_testing
+
+	Команда git push origin --all запушит ВСЕ ветки. 
+
+message:
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (15/15), 1.30 KiB | 442.00 KiB/s, done.
+Total 15 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/olgadygai/group_26.git
+ * [new branch]      Postman -> Postman
+ * [new branch]      Jmeter -> Jmeter
+ * [new branch]      CheckLists -> CheckLists
+ * [new branch]      Bug_Reports -> Bug_Reports
+ * [new branch]      SQL -> SQL
+ * [new branch]      Charles -> Charles
+ * [new branch]      Mobile_testing -> Mobile_testing
+Branch 'Postman' set up to track remote branch 'Postman' from 'origin'.
+Branch 'Jmeter' set up to track remote branch 'Jmeter' from 'origin'.
+Branch 'CheckLists' set up to track remote branch 'CheckLists' from 'origin'.
+Branch 'Bug_Reports' set up to track remote branch 'Bug_Reports' from 'origin'.
+Branch 'SQL' set up to track remote branch 'SQL' from 'origin'.
+Branch 'Charles' set up to track remote branch 'Charles' from 'origin'.
+Branch 'Mobile_testing' set up to track remote branch 'Mobile_testing' from 'origin'.
+
+	
+3. В ветке Bug Reports сделать текстовый документ со структурой баг репорта
+
+						====
+
+	git checkout Bug_Reports -> touch bug_report.txt -> vim bug_report.txt -> i -> 
+
+	bug_report:
+	Project:"Приют для животных"
+               Issue_Type - Bug
+               ID - BG2
+               Summary - Фильтр "Сортировать по" на странице [Питомцы] не сортирует по Статусу.
+               Precondition -
+                  1) Открыть сайт http://130.193.37.179/app/pets
+               STR -
+                  1) Нажать на фильтр "Сортировать по".
+                  2) Нажать на фильтр "Статус".
+               Actual_result - Карточки питомцев отсортированы без логической последовательности.
+               Expected_Result - Карточки питомцев отсортированы по статусам.
+               Priority - Major
+               Environment - Windows 10 Google Chrome Version 88.0.4324.190
+
+	-> esc -> :wq -> enter 
+
+4. Запушить структуру багрепорта на внешний репозиторий
+						
+					====
+
+	git add bug_report.txt -> git commit -m "Create bug_report" -> git push origin Bug_Reports
+
+	message:
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 769 bytes | 769.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/olgadygai/group_26.git
+   544749b..2d8e6ea  Bug_Reports -> Bug_Reports
+Branch 'Bug_Reports' set up to track remote branch 'Bug_Reports' from 'origin'.
+
+5. Вмержить ветку Bug Reports в Main
+
+						====
+	git checkout main -> git merge Bug_Reports
+
+	message:
+Updating 544749b..2d8e6ea
+Fast-forward
+ bug_report.txt | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 bug_report.txt
+
+
+6. Запушить main на внешний репозиторий.
+
+						====
+	
+	git push -u origin main
+
+	message:
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 769 bytes | 769.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/olgadygai/group_26.git
+   9e5555b..2d8e6ea  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+	
+7. В ветке CheckLists набросать структуру чек листа.
+
+						====
+	
+	git checkout CheckLists -> touch checklist.txt -> vim checklist.txt -> i -> 
+
+
+-> esc -> :wq -> enter 
+						
+8. Запушить структуру на внешний репозиторий
+
+						====
+
+	git add checklist.txt -> git commit -m "Create checklist" -> git push origin CheckLists
+
+	message:
+
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.32 KiB | 1.32 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/olgadygai/group_26.git
+   544749b..f35a8a9  CheckLists -> CheckLists
+Branch 'CheckLists' set up to track remote branch 'CheckLists' from 'origin'.
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+						====
+
+	Нажать кнопку Compare & pull request
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
+						====
+
+	git checkout main -> git pull
+
+	message:
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 770 bytes | 96.00 KiB/s, done.
+From https://github.com/olgadygai/group_26
+   2d8e6ea..a8408de  main       -> origin/main
+Updating 2d8e6ea..a8408de
+Fast-forward
+ checklist.txt | 87 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 87 insertions(+)
+
