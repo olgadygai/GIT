@@ -1,4 +1,4 @@
-					Linux terminal (GitBash) commands
+					Linux terminal (GitBash) 
 
 1) Посмотреть где я 
 						==== 
