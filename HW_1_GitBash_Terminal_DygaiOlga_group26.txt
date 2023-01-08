@@ -7,7 +7,7 @@
 2) Создать папку 
 						====
 	mkdir foldername
-
+ 
 3) Зайти в папку 
 						==== 
 	cd foldername
